@@ -4,15 +4,15 @@ class Student:
         self.student_id = student_id
         self.first_name = first_name
         self.last_name = last_name
-        self.exam_score = None
+        self.exam_score = []
     def add_score(self, exam_score):
         self.exam_score = exam_score
         pass
-    def show_scores(self):  # print(" ".join(map(str, my_list2)))
+    def show_scores(self):  
             print('Show scores:', str(self.exam_score).strip('[]'))
 
     def score_average(self):
-        if self.exam_score != None:
+        if self.exam_score != []:
             print(f"Average score: {sum(self.exam_score)/len(self.exam_score):.2f}")
         else:
             print('The student has not yet passed any exam')
